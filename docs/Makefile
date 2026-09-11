@@ -22,7 +22,7 @@ get_katex: .cache/plugin/privacy/assets/external/cdn.jsdelivr.net/npm/katex/dist
 
 venv:
 	python3 -m venv venv
-	venv/bin/pip install --no-cache-dir black mkdocs-material mkdocstrings-python griffe-inherited-docstrings markdown-exec
+	venv/bin/pip install --no-cache-dir black mkdocs-material==9.7.1 mkdocstrings-python==1.18.2 griffe-inherited-docstrings markdown-exec
 
 .PHONY: clean
 clean:
