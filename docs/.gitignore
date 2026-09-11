@@ -1,3 +1,5 @@
-/.cache
 /site
+/src/assets/fonts/
+/src/assets/katex/
+/template/partials/header.html
 /venv

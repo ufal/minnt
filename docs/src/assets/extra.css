@@ -1,0 +1,12 @@
+:root{
+  --md-text-font: "Inter";
+  --md-code-font: "JetBrains Mono";
+}
+
+.md-grid {
+  max-width: initial;
+}
+
+h1 {
+  color: var(--md-primary-fg-color) !important;
+}

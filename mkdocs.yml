@@ -1,12 +1,14 @@
 site_name: Minnt Framework
 site_url: https://minnt.org/
 repo_url: https://github.com/ufal/minnt
-docs_dir: src
-watch: [../minnt, ../examples]
+docs_dir: docs/src
+site_dir: docs/site
+watch: [minnt, examples]
 nav:
-- index.md
-- examples.md
-- changelog.md
+- Minnt Framework:
+  - index.md
+  - examples.md
+  - changelog.md
 - API Reference:
   - trainable_module.md
   - transformed_dataset.md
@@ -54,8 +56,6 @@ plugins:
     default_handler: python
     handlers:
       python:
-        paths:
-        - ../
         inventories:
         - https://docs.python.org/3/objects.inv
         - https://pytorch.org/docs/stable/objects.inv
@@ -74,7 +74,6 @@ plugins:
           extensions:
           - griffe_inherited_docstrings
 - markdown-exec
-- privacy: {assets_exclude: [unpkg.com/mermaid*]}
 markdown_extensions:
   attr_list:
   pymdownx.arithmatex:
@@ -94,37 +93,41 @@ markdown_extensions:
         case: lower
 theme:
   name: material
+  font: false
+  custom_dir: docs/template
   logo: images/leaf-green.svg
   favicon: images/leaf-green.svg
   features:
   - content.code.copy
   - navigation.sections
   - navigation.top
+  - search.highlight
   - toc.follow
   palette:
   - media: "(prefers-color-scheme)"
     toggle:
-      icon: material/brightness-auto
+      icon: lucide/sun-moon
       name: Switch to light mode
   - media: "(prefers-color-scheme: light)"
     scheme: default
     primary: teal
     accent: deep orange
     toggle:
-      icon: material/brightness-7
+      icon: lucide/sun
       name: Switch to dark mode
   - media: "(prefers-color-scheme: dark)"
     scheme: slate
     primary: teal
     accent: deep orange
     toggle:
-      icon: material/brightness-4
+      icon: lucide/moon
       name: Switch to system preference
 extra:
   generator: false
 extra_css:
-- stylesheets/extra.css
-- https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+- assets/fonts/fonts.css
+- assets/katex/katex.min.css
+- assets/extra.css
 extra_javascript:
-- javascripts/katex.js
-- https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js
+- assets/katex/katex.min.js
+- assets/katex_load.js

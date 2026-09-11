@@ -1,0 +1,1 @@
+sed 's#\(<header [^>]*\)>#\1 data-md-color-scheme="slate" style="background-color: var(--md-primary-fg-color); color: var(--md-primary-bg-color)">#' "$1"

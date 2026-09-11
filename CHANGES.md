@@ -1,6 +1,7 @@
 Version 1.1.2-dev
 -----------------
 - On PyTorch 2.12+, enable `expandable_segments` in `startup` also for ROCm.
+- Start using Zensical for documentation.
 
 
 Version 1.1.1 [29 Jun 2026]
