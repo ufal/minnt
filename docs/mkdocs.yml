@@ -7,47 +7,48 @@ nav:
 - index.md
 - examples.md
 - changelog.md
-- trainable_module.md
-- transformed_dataset.md
-- type_aliases.md
-- utilities.md
-- vocabulary.md
-- Callbacks:
-  - callback.md
-  - callbacks/early_stopping.md
-  - callbacks/keep_best_weights.md
-  - callbacks/save_best_weights.md
-  - callbacks/save_weights.md
-- Loggers:
-  - logger.md
-  - loggers/base_logger.md
-  - loggers/filesystem_logger.md
-  - loggers/multi_logger.md
-  - loggers/tensorboard_logger.md
-  - loggers/wandb_logger.md
-- Losses:
-  - loss.md
-  - losses/binary_cross_entropy.md
-  - losses/categorical_cross_entropy.md
-  - losses/mean_squared_error.md
-- Metrics:
-  - metric.md
-  - metrics/binary_accuracy.md
-  - metrics/binary_cross_entropy.md
-  - metrics/categorical_accuracy.md
-  - metrics/categorical_cross_entropy.md
-  - metrics/exact_match.md
-  - metrics/mean.md
-  - metrics/mean_squared_error.md
-- Optimizers:
-  - optimizers/adafactor.md
-  - optimizers/lazy_adam.md
-  - optimizers/multi_optimizer.md
-- Schedulers:
-  - schedulers/cosine_decay.md
-  - schedulers/generic_decay.md
-  - schedulers/linear_decay.md
-  - schedulers/no_decay.md
+- API Reference:
+  - trainable_module.md
+  - transformed_dataset.md
+  - type_aliases.md
+  - utilities.md
+  - vocabulary.md
+  - Callbacks:
+    - callback.md
+    - callbacks/early_stopping.md
+    - callbacks/keep_best_weights.md
+    - callbacks/save_best_weights.md
+    - callbacks/save_weights.md
+  - Loggers:
+    - logger.md
+    - loggers/base_logger.md
+    - loggers/filesystem_logger.md
+    - loggers/multi_logger.md
+    - loggers/tensorboard_logger.md
+    - loggers/wandb_logger.md
+  - Losses:
+    - loss.md
+    - losses/binary_cross_entropy.md
+    - losses/categorical_cross_entropy.md
+    - losses/mean_squared_error.md
+  - Metrics:
+    - metric.md
+    - metrics/binary_accuracy.md
+    - metrics/binary_cross_entropy.md
+    - metrics/categorical_accuracy.md
+    - metrics/categorical_cross_entropy.md
+    - metrics/exact_match.md
+    - metrics/mean.md
+    - metrics/mean_squared_error.md
+  - Optimizers:
+    - optimizers/adafactor.md
+    - optimizers/lazy_adam.md
+    - optimizers/multi_optimizer.md
+  - Schedulers:
+    - schedulers/cosine_decay.md
+    - schedulers/generic_decay.md
+    - schedulers/linear_decay.md
+    - schedulers/no_decay.md
 plugins:
 - mkdocstrings:
     default_handler: python
@@ -95,9 +96,9 @@ theme:
   name: material
   logo: images/leaf-green.svg
   favicon: images/leaf-green.svg
-  custom_dir: template
   features:
   - content.code.copy
+  - navigation.sections
   - navigation.top
   - toc.follow
   palette:

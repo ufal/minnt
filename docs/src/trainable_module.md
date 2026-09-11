@@ -1,7 +1,3 @@
----
-section: API Reference
----
-
 # TrainableModule
 
 ::: minnt.trainable_module
