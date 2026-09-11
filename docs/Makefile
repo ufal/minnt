@@ -4,7 +4,7 @@ all: site
 PREREQUISITIES := Makefile ../mkdocs.yml $(wildcard src/* src/*/* template/partials/* ../minnt/* ../minnt/*/*)
 site: get_assets $(PREREQUISITIES)
 	venv/bin/zensical build -f ../mkdocs.yml
-	@rm -rf site/assets/images site/assets/stylesheets/classic
+	@rm -rf site/assets/images site/assets/stylesheets/classic site/partials
 
 .PHONY: install
 install: site
