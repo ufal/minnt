@@ -1,9 +1,9 @@
 .PHONY: all
 all: site
 
-PREREQUISITIES := Makefile ../mkdocs.yml $(wildcard src/* src/*/* template/partials/* ../minnt/* ../minnt/*/*)
+PREREQUISITIES := Makefile ../zensical.toml $(wildcard src/* src/*/* template/partials/* ../minnt/* ../minnt/*/*)
 site: get_assets $(PREREQUISITIES)
-	venv/bin/zensical build -f ../mkdocs.yml
+	venv/bin/zensical build -f ../zensical.toml
 	@rm -rf site/assets/images site/assets/stylesheets/classic site/partials
 
 .PHONY: install
@@ -12,7 +12,7 @@ install: site
 
 .PHONY: serve
 serve: get_assets $(PREREQUISITIES)
-	venv/bin/zensical serve -f ../mkdocs.yml -a localhost:1234
+	venv/bin/zensical serve -f ../zensical.toml -a localhost:1234
 
 .PHONY: get_assets
 ASSETS := src/assets/katex src/assets/fonts template/partials/header.html

@@ -1,0 +1,149 @@
+[project]
+site_name = "Minnt Framework"
+site_url = "https://minnt.org/"
+repo_url = "https://github.com/ufal/minnt"
+docs_dir = "docs/src"
+site_dir = "docs/site"
+watch = ["minnt", "examples"]
+
+nav = [
+  { "Minnt Framework" = [
+    "index.md",
+    "examples.md",
+    "changelog.md",
+  ] },
+  { "API Reference" = [
+    "trainable_module.md",
+    "transformed_dataset.md",
+    "type_aliases.md",
+    "utilities.md",
+    "vocabulary.md",
+    { "Callbacks" = [
+      "callback.md",
+      "callbacks/early_stopping.md",
+      "callbacks/keep_best_weights.md",
+      "callbacks/save_best_weights.md",
+      "callbacks/save_weights.md",
+    ] },
+    { "Loggers" = [
+      "logger.md",
+      "loggers/base_logger.md",
+      "loggers/filesystem_logger.md",
+      "loggers/multi_logger.md",
+      "loggers/tensorboard_logger.md",
+      "loggers/wandb_logger.md",
+    ] },
+    { "Losses" = [
+      "loss.md",
+      "losses/binary_cross_entropy.md",
+      "losses/categorical_cross_entropy.md",
+      "losses/mean_squared_error.md",
+    ] },
+    { "Metrics" = [
+      "metric.md",
+      "metrics/binary_accuracy.md",
+      "metrics/binary_cross_entropy.md",
+      "metrics/categorical_accuracy.md",
+      "metrics/categorical_cross_entropy.md",
+      "metrics/exact_match.md",
+      "metrics/mean.md",
+      "metrics/mean_squared_error.md",
+    ] },
+    { "Optimizers" = [
+      "optimizers/adafactor.md",
+      "optimizers/lazy_adam.md",
+      "optimizers/multi_optimizer.md",
+    ] },
+    { "Schedulers" = [
+      "schedulers/cosine_decay.md",
+      "schedulers/generic_decay.md",
+      "schedulers/linear_decay.md",
+      "schedulers/no_decay.md",
+    ] },
+  ] },
+]
+
+extra_css = [
+  "assets/fonts/fonts.css",
+  "assets/katex/katex.min.css",
+  "assets/extra.css",
+]
+extra_javascript = [
+  "assets/katex/katex.min.js",
+  "assets/katex_load.js",
+]
+
+[project.theme]
+custom_dir = "docs/template"
+logo = "images/leaf-green.svg"
+favicon = "images/leaf-green.svg"
+font = false
+features = [
+  "content.code.copy",
+  "navigation.sections",
+  "navigation.top",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "teal"
+accent = "deep orange"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "teal"
+accent = "deep orange"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.extra]
+generator = false
+
+[project.markdown_extensions]
+attr_list = {}
+pymdownx.arithmatex.generic = true
+pymdownx.arithmatex.inline_syntax = ["dollar"]
+pymdownx.arithmatex.block_syntax = ["dollar"]
+pymdownx.highlight = {}
+pymdownx.inlinehilite = {}
+pymdownx.snippets.base_path = [".", ".."]
+pymdownx.snippets.check_paths = true
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.slugify.kwds.case = "lower"
+
+[project.plugins.mkdocstrings]
+default_handler = "python"
+
+[project.plugins.mkdocstrings.handlers.python]
+inventories = [
+  "https://docs.python.org/3/objects.inv",
+  "https://pytorch.org/docs/stable/objects.inv",
+  "https://numpy.org/doc/stable/objects.inv",
+]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_section_style = "list"
+members_order = "source"
+group_by_category = false
+show_root_heading = true
+show_symbol_type_toc = true
+show_symbol_type_heading = true
+show_signature_annotations = true
+separate_signature = true
+signature_crossrefs = true
+line_length = 80
+extensions = ["griffe_inherited_docstrings"]
+
+[project.plugins.markdown-exec]
