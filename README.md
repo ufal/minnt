@@ -10,5 +10,5 @@ See the [examples](https://minnt.org/examples/).
 
 Install using:
 ```
-pip install minnt --extra-index-url=https://download.pytorch.org/whl/cu130 torch torchvision
+pip install minnt --extra-index-url=https://download.pytorch.org/whl/cu132 torch torchvision
 ```
